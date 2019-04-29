@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showInspector = id; }; 
+            CLASS = AppDelegate; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {showHelp = id; toggleShowsStringsAsNonLossyASCII = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {orderFrontStandardAboutPanel = id; }; 
+            CLASS = NSApplication; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {CLASS = STEController; LANGUAGE = ObjC; SUPERCLASS = NSDocumentController; }
+    ); 
+    IBVersion = 1; 
+}

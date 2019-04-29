@@ -1,0 +1,212 @@
+// ScriptTerminology.plistDefinition
+// PropertyListEditor Demo
+// Copyright (c) 1998-2002, Apple Computer, Inc.
+// All rights reserved.
+// Responsibility: Mike Ferris
+
+// This plistDefinition defines the format of the scriptTerminology files used for Cocoa Scripting
+
+{
+    "FileExtension" = "scriptTerminology";
+    
+    "DefinitionElements" = {
+        // Define the top-level dictionary of of scriptSuite.
+        "<Root>" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "MyApp's scripting suite";
+                "Description" = "Defines classes and commands specific to MyApp.";
+                "Classes" = {};
+                "Commands" = {};
+                "Synonyms" = {};
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "Description" = "String";
+                "Classes" = "ClassListTerminologyDictionary";
+                "Commands" = "CommandListTerminologyDictionary";
+                "Synonyms" = "SynonymListTerminologyDictionary";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Here's a useful little definition or two...
+        "BooleanStringDefaultNO" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "YES" = "YES";
+                "NO" = "NO";
+            };
+            "DefaultValue" = "NO";
+        };
+
+        "BooleanStringDefaultYES" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "YES" = "YES";
+                "NO" = "NO";
+            };
+            "DefaultValue" = "YES";
+        };
+
+        // Define "it"
+        "SexString" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "none" = "none";
+                "masculine" = "masculine";
+                "feminine" = "feminine";
+            };
+            "DefaultValue" = "none";
+        };
+
+        // Define singular or plural choice
+        "SingularOrPluralString" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "singular" = "singular";
+                "plural" = "plural";
+            };
+            "DefaultValue" = "singular";
+        };
+
+        // Define a class list dictionary.
+        "ClassListTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "ClassTerminologyDictionary";  // allow arbitrary keys, but their values are all ClassTerminologyDictionaries.
+            };
+        };
+
+        // Define a class dictionary.
+        "ClassTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "doodad";
+                "PluralName" = "doodads";
+                "Description" = "This class represents those, um, whatchamacallits.";
+                "Attributes" = {};
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "PluralName" = "String";
+                "Description" = "String";
+                "Attributes" = AttributeListTerminologyDictionary;
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Define a attribute list dictionary.
+        "AttributeListTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "AttributeTerminologyDictionary";  // allow arbitrary keys, but their values are all AttributeTerminologyDictionaries.
+            };
+        };
+
+        // Define a attribute dictionary.
+        "AttributeTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "thingum";
+                "Description" = "This is the... whatever.";
+                "Sex" = "none";
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "Description" = "String";
+                "Sex" = "SexString";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Define a command list dictionary.
+        "CommandListTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "CommandTerminologyDictionary";  // allow arbitrary keys, but their values are all CommandTerminologyDictionaries.
+            };
+        };
+
+        // Define a command dictionary.
+        "CommandTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "frob";
+                "Description" = "This command frobs the receiver(s).";
+                "IsVerb" = "YES";
+                "Arguments" = {};
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "Description" = "String";
+                "IsVerb" = "BooleanStringDefaultYES";
+                "Arguments" = "ArgumentListTerminologyDictionary";
+            };
+        };
+
+        // Define a argument list dictionary.
+        "ArgumentListTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "ArgumentTerminologyDictionary";  // allow arbitrary keys, but their values are all ArgumentTerminologyDictionaries.
+            };
+        };
+
+        // Define a argument dictionary.
+        "ArgumentTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "on";
+                "Description" = "This argument specifies the part of the receivers on which to frob.";
+                "Sex" = "none";
+                "Number" = "singular";
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "Description" = "String";
+                "Sex" = "SexString";
+                "Number" = "SingularOrPluralString";
+            };
+        };
+
+        // Define a synonym list dictionary.
+        "SynonymListTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "SynonymTerminologyDictionary";  // allow arbitrary keys, but their values are all SynonymTerminologyDictionaries.
+            };
+        };
+
+        // Define a synonym dictionary.
+        "SynonymTerminologyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "doodad";
+                "PluralName" = "doodads";
+                "Description" = "This class represents those, um, whatchamacallits.";
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "PluralName" = "String";
+                "Description" = "String";
+            };
+        };
+    };
+}

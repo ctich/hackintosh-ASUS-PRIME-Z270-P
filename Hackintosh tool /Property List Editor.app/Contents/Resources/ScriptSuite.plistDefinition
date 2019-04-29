@@ -1,0 +1,204 @@
+// ScriptSuite.plistDefinition
+// PropertyListEditor Demo
+// Copyright (c) 1998-2002, Apple Computer, Inc.
+// All rights reserved.
+// Responsibility: Mike Ferris
+
+// This plistDefinition defines the format of the scriptSuite files used for Cocoa Scripting
+
+{
+    "FileExtension" = "scriptSuite";
+    
+    "DefinitionElements" = {
+        // Define the top-level dictionary of of scriptSuite.
+        "<Root>" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Name" = "MyApp";
+                "AppleEventCode" = "****";
+                "Classes" = {};
+                "Commands" = {};
+                "Synonyms" = {};
+            };
+            "DictionaryKeyTypes" = {
+                "Name" = "String";
+                "AppleEventCode" = "String";
+                "Classes" = "ClassListDictionary";
+                "Commands" = "CommandListDictionary";
+                "Synonyms" = "SynonymListDictionary";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Here's a useful little definition or two...
+        "BooleanStringDefaultNO" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "YES" = "YES";
+                "NO" = "NO";
+            };
+            "DefaultValue" = "NO";
+        };
+
+        "BooleanStringDefaultYES" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "YES" = "YES";
+                "NO" = "NO";
+            };
+            "DefaultValue" = "YES";
+        };
+
+        // Define a class list dictionary.
+        "ClassListDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "ClassDictionary";  // allow arbitrary keys, but their values are all ClassDictionaries.
+            };
+        };
+
+        // Define a class dictionary.
+        "ClassDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Superclass" = "NSCoreSuite.AbstractObject";
+                "AppleEventCode" = "****";
+                "Attributes" = {};
+                "ToOneRelationships" = {};
+                "ToManyRelationships" = {};
+                "SupportedCommands" = {};
+                "InverseRelationships" = {};
+            };
+            "DictionaryKeyTypes" = {
+                "Superclass" = "String";
+                "AppleEventCode" = "String";
+                "Attributes" = "PropertyListDictionary";
+                "ToOneRelationships" = "PropertyListDictionary";
+                "ToManyRelationships" = "PropertyListDictionary";
+                "SupportedCommands" = "SupportedCommandsDictionary";
+                "InverseRelationships" = "InverseRelationshipsDictionary";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Define a property list dictionary.
+        "PropertyListDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "PropertyDictionary";  // allow arbitrary keys, but their values are all PropertyDictionaries.
+            };
+        };
+
+        // Define a property dictionary.
+        "PropertyDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Type" = "String";
+                "AppleEventCode" = "****";
+                "ReadOnly" = "NO";
+            };
+            "DictionaryKeyTypes" = {
+                "Type" = "String";
+                "AppleEventCode" = "String";
+                "ReadOnly" = "BooleanStringDefaultNO";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Define a supported commands dictionary.
+        "SupportedCommandsDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "String";  // allow arbitrary keys, but their values are all NSStrings.
+            };
+        };
+
+        // Define an inverse relationships dictionary.
+        "InverseRelationshipsDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "String";  // allow arbitrary keys, but their values are all NSStrings.
+            };
+        };
+
+        // Define a command list dictionary.
+        "CommandListDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "CommandDictionary";  // allow arbitrary keys, but their values are all CommandDictionaries.
+            };
+        };
+
+        // Define a command dictionary.
+        "CommandDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "CommandClass" = "NSScriptCommand";
+                "AppleEventCode" = "****";
+                "AppleEventClassCode" = "****";
+                "Type" = "";
+                "ResultAppleEventCode" = "****";
+                "Arguments" = {};
+            };
+            "DictionaryKeyTypes" = {
+                "CommandClass" = "String";
+                "AppleEventCode" = "String";
+                "AppleEventClassCode" = "String";
+                "Type" = "String";
+                "ResultAppleEventCode" = "String";
+                "Arguments" = ArgumentListDictionary;
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Define an argument list dictionary.
+        "ArgumentListDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "ArgumentDictionary";  // allow arbitrary keys, but their values are all ArgumentDictionaries.
+            };
+        };
+
+        // Define an argument dictionary.
+        "ArgumentDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "Type" = "NSObject";
+                "AppleEventCode" = "****";
+                "Optional" = "NO";
+            };
+            "DictionaryKeyTypes" = {
+                "Type" = "String";
+                "AppleEventCode" = "String";
+                "Optional" = "BooleanStringDefaultNO";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        "SynonymListDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {};
+            "DictionaryKeyTypes" = {
+                "" = "String";  // allow arbitrary keys, but their values are all NSStrings.
+            };
+        };
+    };
+}

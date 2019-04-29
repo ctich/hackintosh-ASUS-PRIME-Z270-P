@@ -1,0 +1,109 @@
+// CustomInfo.plist.plistDefinition
+// PropertyListEditor Demo
+// Copyright (c) 1998-2002, Apple Computer, Inc.
+// All rights reserved.
+// Responsibility: Mike Ferris
+
+// This plistDefinition defines the format of the CustomInfo.plist files used for the Document architecure
+
+{
+    "FileName" = "CustomInfo.plist";
+    
+    "DefinitionElements" = {
+        // Define the top-level dictionary of of scriptSuite.
+        "<Root>" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+                "NSInfoPlistVersion" = "5.0";
+                "NSAppVersion" = "1.0-dev";
+                "NSMacOSCreator" = "????";
+                "NSHumanReadableShortName" = "MyApp";
+                "NSHumanReadableCompleteName" = "My Application";
+                "NSHumanReadableCopyRight" = "MyApp - copyright 2002 MySoft, Inc.";
+		"NSTypes" = (
+		    {
+			"NSName" = "MyType";
+			"NSHumanReadableName" = "My data file type.";
+			"NSUnixExtensions" = ("myType");
+			"NSDOSExtensions" = ("myType");
+			"NSRole" = "Editor";
+			"NSDocumentClass" = "MyDocument";
+		    }
+		);
+            };
+            "DictionaryKeyTypes" = {
+                "NSInfoPlistVersion" = "String";
+                "NSAppVersion" = "String";
+                "NSMacOSCreator" = "String";
+                "NSHumanReadableShortName" = "String";
+                "NSHumanReadableCompleteName" = "String";
+                "NSHumanReadableCopyRight" = "String";
+                "NSTypes" = "TypeArray";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+            };
+        };
+
+        // Here's a useful little definition or two...
+        "RoleString" = {
+            "Class" = "String";
+            "AllowableValues" = {
+                "Editor" = "Editor";
+                "Viewer" = "Viewer";
+		"None" = "None";
+            };
+            "DefaultValue" = "Editor";
+        };
+
+        "TypeArray" = {
+            "Class" = "Array";
+            // "AllowableValues" = {};
+            "DefaultValue" = (
+		{
+		    "NSName" = "MyType";
+		    "NSHumanReadableName" = "My data file type.";
+		    "NSUnixExtensions" = ("myType");
+		    "NSDOSExtensions" = ("myType");
+		    "NSRole" = "Editor";
+		    "NSDocumentClass" = "MyDocument";
+		}
+	    );
+	    "ArrayElementType" = "TypeDictionary";
+        };
+
+        "TypeDictionary" = {
+            "Class" = "Dictionary";
+            // "AllowableValues" = {};
+            "DefaultValue" = {
+		"NSName" = "MyType";
+		"NSHumanReadableName" = "My data file type.";
+		"NSIcon" = "MyIcon";
+		"NSUnixExtensions" = ("myType");
+		"NSDOSExtensions" = ("myType");
+		"NSMacOSTypes" = ("mytp");
+		"NSMIMETypes" = ("MyMIMEType");
+		"NSRole" = "Editor";
+		"NSDocumentClass" = "MyDocument";
+	    };
+	    "DictionaryKeyTypes" = {
+                "NSName" = "String";
+                "NSHumanReadableName" = "String";
+                "NSMacOSCreator" = "String";
+                "NSUnixExtensions" = "ExtensionArray";
+                "NSDOSExtensions" = "ExtensionArray";
+                "NSMacOSTypes" = "ExtensionArray";
+                "NSMIMETypes" = "ExtensionArray";
+                "NSRole" = "RoleString";
+                "NSDocumentClass" = "String";
+                "" = "";  // Allow arbitrary keys and values beyond these, for expandability.
+	    };
+        };
+	
+        "ExtensionArray" = {
+            "Class" = "Array";
+            // "AllowableValues" = {};
+            "DefaultValue" = ("myType");
+	    "ArrayElementType" = "String";
+        };
+    };
+}
