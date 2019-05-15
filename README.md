@@ -1,33 +1,48 @@
 # hackintosh ASUS PRIME Z270-P
+
     * установка проверена на всех версиях bios от 0325 до 1205.
+=== Актуализация EFI по состоянию на 15.05.2019 ===
 
-EFI папка актуальна для систем: 10.12.6 | 10.13.6 | 10.14.4
+"EFI" актуальна для систем: 10.12.6 | 10.13.6 | 10.14.5 | **Clover v2.4k r4928**
+## Моя конфигурация PC:
 
-Настройте биос согласно скриншотам из папки "Bios Settings".
-Создайте установочную флешку через BootDisk Utility (BDU) воспользовавшись мануалом:
-    https://www.applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/
-    http://cvad-mac.narod.ru/index/bootdiskutility_exe/0-5
+- **Процессор Intel® Core™ i5-7400**
+ - Intel® HD Graphics 630 for Intel Quick Sync Video via 0x59120003
+- **Материнская плата ASUS PRIME Z270-P**
+ - LAN: Realtek® RTL8111H, ок.
+ - AUDIO: Realtek® ALC887, ok
+ - USB:  Intel® Z270 Chipset, ok.
+- **Видеокарта Sapphire PULSE Radeon RX 550 4G G5 640SP (11268-15)**
+- **Жесткий диск SSD NVMe Samsung 970 EVO 250Gb (MZ-V7E250)**
+- **Оперативная память DDR4 Samsung M378A1G43EB1-CPB 8 Gb * 2шт.** 
 
-Скачайте установочный образ для  BDU:
-        https://nnmclub.to/forum/viewtopic.php?t=1285341
-        http://mac-ru.net/login.php?redirect=/viewtopic.php?t=1402
+### Установка:
 
-Разверните образ на ранее подготовленную флешку утилитой BDU.
+**Настройте биос согласно скриншотам из папки "Bios Settings".**
 
-Замените папку EFI подготовленную утилитой BDU на флешку, из этого репозитория.
+- Создайте установочную флешку через BootDisk Utility (BDU) воспользовавшись мануалом:
+ - https://www.applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/
+  - http://cvad-mac.narod.ru/index/bootdiskutility_exe/0-5
 
-Подключите флешку в порт USB2.0 на материнской плате (это важно!)
+**Скачайте установочный образ для  BDU:**
 
-Установите macOs следуя инструкциям.
+ - https://nnmclub.to/forum/viewtopic.php?t=1285341
+ - http://mac-ru.net/login.php?redirect=/viewtopic.php?t=1402
 
-После установки:
+**Разверните образ на ранее подготовленную флешку утилитой BDU.**
 
-Запустите утилиту - "EFI Agent" - https://www.insanelymac.com/forum/topic/337807-efi-agent-v123-menu-bar-utility/
+- Замените папку EFI подготовленную утилитой BDU на флешку, из этого репозитория.
+- Подключите флешку в порт USB2.0 на материнской плате (это важно!)
+- Установите macOs следуя инструкциям.
 
-Смонтируйте скрытый раздел EFI;
+### После установки:
 
-Скопируйте в него подготовленную "EFI"(из этого репозитория);
+- Запустите утилиту - "EFI Agent" - https://www.insanelymac.com/forum/topic/337807-efi-agent-v123-menu-bar-utility/
 
-В биосе выставьте приорит загрузки с UEFI "Название вашего диска";
+- Смонтируйте скрытый раздел EFI;
 
-Все, система должна загружаться с EFI.
+- Скопируйте в него подготовленную "EFI"(из этого репозитория);
+
+- В биосе выставьте приорит загрузки с UEFI "Название вашего диска";
+
+**Все, система должна загружаться с EFI.**
