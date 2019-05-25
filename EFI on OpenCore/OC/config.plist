@@ -615,14 +615,14 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14.5 beta2</string>
+				<string>Disable panic kext logging on 10.14.4/10.14.5</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				igKEwHRH
+				AIoChMB0
 				</data>
 				<key>Identifier</key>
 				<string>kernel</string>
@@ -635,7 +635,7 @@
 				<string>18.6.0</string>
 				<key>Replace</key>
 				<data>
-				igKEwOtC
+				AIoChMDr
 				</data>
 				<key>ReplaceMask</key>
 				<data>
