@@ -1025,10 +1025,10 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>ApfsDriverLoader.efi</string>
-			<string>AppleUiSupport.efi</string>
 			<string>AptioMemoryFix.efi</string>
 			<string>AptioInputFix.efi</string>
+			<string>AppleUiSupport.efi</string>
+			<string>ApfsDriverLoader.efi</string>
 			<string>HFSPlus64.efi</string>
 			<string>VirtualSmc.efi</string>
 		</array>
