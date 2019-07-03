@@ -251,63 +251,6 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>#PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built-in</string>
-				<key>device_type</key>
-				<string>Serial bus controller</string>
-				<key>model</key>
-				<string>200 Series/Z370 Chipset Family USB 3.0 xHCI Controller</string>
-			</dict>
-			<key>#PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>M.2 Socket 3</string>
-				<key>device_type</key>
-				<string>Non-Volatile memory controller</string>
-				<key>model</key>
-				<string>Samsung SSD 970 EVO 250GB</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>@1,AAPL,boot-display</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>@1,connector-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>@2,connector-type</key>
-				<data>
-				AgAAAA==
-				</data>
-				<key>AAPL,slot-name</key>
-				<string>PCI Slot 0</string>
-				<key>ATY,DeviceID</key>
-				<data>
-				/2c=
-				</data>
-				<key>ATY,VendorID</key>
-				<data>
-				AhA=
-				</data>
-				<key>connector-priority</key>
-				<data>
-				AQUE
-				</data>
-				<key>device_type</key>
-				<string>Display controller</string>
-				<key>graphic-options</key>
-				<data>
-				DAAAAA==
-				</data>
-				<key>hda-gfx</key>
-				<string>onboard-2</string>
-				<key>model</key>
-				<string>Radeon RX 550</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -331,7 +274,7 @@
 				<string>onboard-2</string>
 				<key>layout-id</key>
 				<data>
-				NQAAAA==
+				NAAAAA==
 				</data>
 				<key>model</key>
 				<string>Realtek ALC887</string>
@@ -496,102 +439,6 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14.4/10.14.5</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AIoChMB0
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MatchKernel</key>
-				<string>18.6.0</string>
-				<key>Replace</key>
-				<data>
-				AIoChMDr
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14 Release kernel</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				igKEwHRC
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MatchKernel</key>
-				<string>18.6.0</string>
-				<key>Replace</key>
-				<data>
-				igKEwOtC
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.13 Release kernel</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				igKEwHRE
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MatchKernel</key>
-				<string>17.7.0</string>
-				<key>Replace</key>
-				<data>
-				igKEwOtE
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
 				<string>1PMEC</string>
 				<key>Count</key>
 				<integer>1</integer>
@@ -728,7 +575,7 @@
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
-			<false/>
+			<true/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>LapicKernelPanic</key>
@@ -821,7 +668,7 @@
 				<key>Comment</key>
 				<string>APPLE_BOOT_VARIABLE_GUID</string>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 darkwake=0 -lilubetaall</string>
+				<string>-v keepsyms=1 debug=0x100 darkwake=0</string>
 				<key>csr-active-config</key>
 				<data>
 				AAAAAA==
@@ -948,11 +795,11 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>05/25/2019</string>
+			<string>06/17/2019</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>173.0.0.0.0</string>
+			<string>175.0.0.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
