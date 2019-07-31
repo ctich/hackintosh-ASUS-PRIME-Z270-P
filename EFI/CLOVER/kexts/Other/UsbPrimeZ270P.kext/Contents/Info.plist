@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18G59b</string>
+	<string>18G84</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,27 +17,27 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3</string>
+	<string>1.3.3</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.3</string>
+	<string>1.3.3</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10E1001</string>
+	<string>10G8</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>18E219</string>
+	<string>18G74</string>
 	<key>DTSDKName</key>
 	<string>macosx10.14</string>
 	<key>DTXcode</key>
-	<string>1020</string>
+	<string>1030</string>
 	<key>DTXcodeBuild</key>
-	<string>10E1001</string>
+	<string>10G8</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>iMac18,1-XHC</key>
@@ -71,7 +71,7 @@
 					<key>HS05</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BQAAAA==
@@ -80,7 +80,7 @@
 					<key>HS06</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BgAAAA==
@@ -89,7 +89,7 @@
 					<key>HS07</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BwAAAA==
@@ -98,7 +98,7 @@
 					<key>HS08</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CAAAAA==
@@ -125,7 +125,7 @@
 					<key>HS11</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CwAAAA==
@@ -134,7 +134,7 @@
 					<key>HS12</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DAAAAA==
@@ -143,7 +143,7 @@
 					<key>HS13</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DQAAAA==
@@ -152,7 +152,7 @@
 					<key>HS14</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DgAAAA==
@@ -230,7 +230,7 @@
 					<key>HS05</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BQAAAA==
@@ -239,7 +239,7 @@
 					<key>HS06</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BgAAAA==
@@ -248,7 +248,7 @@
 					<key>HS07</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BwAAAA==
@@ -257,7 +257,7 @@
 					<key>HS08</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CAAAAA==
@@ -284,7 +284,7 @@
 					<key>HS11</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CwAAAA==
@@ -293,7 +293,7 @@
 					<key>HS12</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DAAAAA==
@@ -302,7 +302,7 @@
 					<key>HS13</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DQAAAA==
@@ -311,7 +311,7 @@
 					<key>HS14</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DgAAAA==
@@ -389,7 +389,7 @@
 					<key>HS05</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BQAAAA==
@@ -398,7 +398,7 @@
 					<key>HS06</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BgAAAA==
@@ -407,7 +407,7 @@
 					<key>HS07</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						BwAAAA==
@@ -416,7 +416,7 @@
 					<key>HS08</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CAAAAA==
@@ -443,7 +443,7 @@
 					<key>HS11</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CwAAAA==
@@ -452,7 +452,7 @@
 					<key>HS12</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DAAAAA==
@@ -461,7 +461,7 @@
 					<key>HS13</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DQAAAA==
@@ -470,7 +470,7 @@
 					<key>HS14</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DgAAAA==

@@ -277,7 +277,7 @@
 		<key>StrictHibernate</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>1</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -467,7 +467,7 @@
 				AwASWQ==
 				</data>
 				<key>model</key>
-				<string>Intel Graphics HD630</string>
+				<string>Intel HD Graphics 630</string>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -765,7 +765,7 @@
 				AIoChMB0
 				</data>
 				<key>MatchOS</key>
-				<string>10.14.5</string>
+				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
 				AIoChMDr
@@ -786,7 +786,7 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.14.5</string>
+				<string>10.14.6</string>
 				<key>Name</key>
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
@@ -806,7 +806,7 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.14.5</string>
+				<string>10.14.6</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
@@ -826,7 +826,7 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.14.5</string>
+				<string>10.14.6</string>
 				<key>Name</key>
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
