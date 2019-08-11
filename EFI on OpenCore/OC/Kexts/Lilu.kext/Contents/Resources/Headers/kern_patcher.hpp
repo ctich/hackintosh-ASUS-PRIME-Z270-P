@@ -44,14 +44,14 @@ public:
 		Unsupported,
 		InvalidSymbolFound
 	};
-	
+
 	/**
 	 *  Get last error
 	 *
 	 *  @return error code
 	 */
 	EXPORT Error getError();
-	
+
 	/**
 	 *  Reset all the previous errors
 	 */
@@ -61,7 +61,7 @@ public:
 	 *  Initialise KernelPatcher, prepare for modifications
 	 */
 	void init();
-	
+
 	/**
 	 *  Deinitialise KernelPatcher, must be called regardless of the init error
 	 */
@@ -72,12 +72,12 @@ public:
 	 *  See MachInfo::setKernelWriting
 	 */
 	EXPORT static IOSimpleLock *kernelWriteLock;
-	
+
 	/**
 	 *  Kext information
 	 */
 	struct KextInfo;
-	
+
 #ifdef LILU_KEXTPATCH_SUPPORT
 	struct KextInfo {
 		static constexpr size_t Unloaded {0};
@@ -140,7 +140,7 @@ public:
 	 *  Kernel kinfo id
 	 */
 	static constexpr size_t KernelID {0};
-	
+
 	/**
 	 *  Update running information
 	 *
@@ -150,12 +150,12 @@ public:
 	 *  @param force force recalculatiob
 	 */
 	EXPORT void updateRunningInfo(size_t id, mach_vm_address_t slide=0, size_t size=0, bool force=false);
-	
+
 	/**
 	 *  Any kernel
 	 */
 	static constexpr uint32_t KernelAny {0};
-	
+
 	/**
 	 *  Check kernel compatibility
 	 *
@@ -236,7 +236,7 @@ public:
 	 *  Activates monitoring functions if necessary
 	 */
 	void activate();
-	
+
 	/**
 	 *  Load handling structure
 	 */
@@ -251,7 +251,7 @@ public:
 		static void deleter(KextHandler *i NONNULL) {
 			delete i;
 		}
-		
+
 		void *self {nullptr};
 		const char * const id {nullptr};
 		size_t index {0};
@@ -269,7 +269,7 @@ public:
 	 *  @param handler  handler to process
 	 */
 	EXPORT void waitOnKext(KextHandler *handler);
-	
+
 	/**
 	 *  Update kext handler features
 	 *
@@ -287,7 +287,7 @@ public:
 		size_t size;
 		size_t count;
 	};
-	
+
 	/**
 	 *  Apply a find/replace patch
 	 *
@@ -317,7 +317,33 @@ public:
 	 *  @return wrapper pointer or 0 on success
 	 */
 	EXPORT mach_vm_address_t routeFunction(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper=false, bool kernelRoute=true, bool revertible=true);
-	
+
+	/**
+	 *  Route function to function with long jump
+	 *
+	 *  @param from         function to route
+	 *  @param to           routed function
+	 *  @param buildWrapper create entrance wrapper
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param revertible   patches could be reverted
+	 *
+	 *  @return wrapper pointer or 0 on success
+	 */
+	EXPORT mach_vm_address_t routeFunctionLong(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper=false, bool kernelRoute=true, bool revertible=true);
+
+	/**
+	 *  Route function to function with short jump
+	 *
+	 *  @param from         function to route
+	 *  @param to           routed function
+	 *  @param buildWrapper create entrance wrapper
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param revertible   patches could be reverted
+	 *
+	 *  @return wrapper pointer or 0 on success
+	 */
+	EXPORT mach_vm_address_t routeFunctionShort(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper=false, bool kernelRoute=true, bool revertible=true);
+
 	/**
 	 *  Route block at assembly level
 	 *
@@ -407,6 +433,36 @@ public:
 	EXPORT bool routeMultiple(size_t id, RouteRequest *requests, size_t num, mach_vm_address_t start=0, size_t size=0, bool kernelRoute=true, bool force=false);
 
 	/**
+	 *  Simple route multiple functions with basic error handling with long routes
+	 *
+	 *  @param id           kernel item identifier
+	 *  @param requests     an array of requests to replace
+	 *  @param num          requests array size
+	 *  @param start        start address range
+	 *  @param size         address range size
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param force        continue on first error
+	 *
+	 *  @return false if it at least one error happened
+	 */
+	EXPORT bool routeMultipleLong(size_t id, RouteRequest *requests, size_t num, mach_vm_address_t start=0, size_t size=0, bool kernelRoute=true, bool force=false);
+
+	/**
+	 *  Simple route multiple functions with basic error handling with short routes
+	 *
+	 *  @param id           kernel item identifier
+	 *  @param requests     an array of requests to replace
+	 *  @param num          requests array size
+	 *  @param start        start address range
+	 *  @param size         address range size
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param force        continue on first error
+	 *
+	 *  @return false if it at least one error happened
+	 */
+	EXPORT bool routeMultipleShort(size_t id, RouteRequest *requests, size_t num, mach_vm_address_t start=0, size_t size=0, bool kernelRoute=true, bool force=false);
+
+	/**
 	 *  Simple route multiple functions with basic error handling
 	 *
 	 *  @param id           kernel item identifier
@@ -423,28 +479,79 @@ public:
 		return routeMultiple(id, requests, N, start, size, kernelRoute, force);
 	}
 
+	/**
+	 *  Simple route multiple functions with basic error handling with long routes
+	 *
+	 *  @param id           kernel item identifier
+	 *  @param requests     an array of requests to replace
+	 *  @param start        start address range
+	 *  @param size         address range size
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param force        continue on first error
+	 *
+	 *  @return false if it at least one error happened
+	 */
+	template <size_t N>
+	inline bool routeMultipleLong(size_t id, RouteRequest (&requests)[N], mach_vm_address_t start=0, size_t size=0, bool kernelRoute=true, bool force=false) {
+		return routeMultipleLong(id, requests, N, start, size, kernelRoute, force);
+	}
+
+	/**
+	 *  Simple route multiple functions with basic error handling with long routes
+	 *
+	 *  @param id           kernel item identifier
+	 *  @param requests     an array of requests to replace
+	 *  @param start        start address range
+	 *  @param size         address range size
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param force        continue on first error
+	 *
+	 *  @return false if it at least one error happened
+	 */
+	template <size_t N>
+	inline bool routeMultipleShort(size_t id, RouteRequest (&requests)[N], mach_vm_address_t start=0, size_t size=0, bool kernelRoute=true, bool force=false) {
+		return routeMultipleShort(id, requests, N, start, size, kernelRoute, force);
+	}
+
 private:
+	/**
+	 *  Jump type for routing
+	 */
+	enum class JumpType {
+		Auto,
+		Long,
+		Short
+	};
 
 	/**
 	 *  The minimal reasonable memory requirement
 	 */
 	static constexpr size_t TempExecutableMemorySize {4096};
-	
+
 	/**
 	 *  As of 10.12 we seem to be not allowed to call vm_ functions from several places including onKextSummariesUpdated.
 	 */
 	static uint8_t tempExecutableMemory[TempExecutableMemorySize];
-	
+
 	/**
 	 *  Offset to tempExecutableMemory that is safe to use
 	 */
 	size_t tempExecutableMemoryOff {0};
-	
+
 	/**
 	 *  Patcher status
 	 */
 	bool activated {false};
-	
+
+	/**
+	 *  Read previous jump destination from function
+	 *
+	 *  @param from         formerly routed function
+	 *
+	 *  @return wrapper pointer on success or 0
+	 */
+	mach_vm_address_t readChain(mach_vm_address_t from);
+
 	/**
 	 *  Created routed trampoline page
 	 *
@@ -457,22 +564,52 @@ private:
 	 */
 	mach_vm_address_t createTrampoline(mach_vm_address_t func, size_t min, const uint8_t *opcodes=nullptr, size_t opnum=0);
 
+	/**
+	 *  Route function to function
+	 *
+	 *  @param from         function to route
+	 *  @param to           routed function
+	 *  @param buildWrapper create entrance wrapper
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param revertible   patches could be reverted
+	 *  @param jumpType     jump type to use, relative short or absolute long
+	 *
+	 *  @return wrapper pointer or 0 on success
+	 */
+	mach_vm_address_t routeFunctionInternal(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper=false, bool kernelRoute=true, bool revertible=true, JumpType jumpType=JumpType::Auto);
+
+	/**
+	 *  Simple route multiple functions with basic error handling with long routes
+	 *
+	 *  @param id           kernel item identifier
+	 *  @param requests     an array of requests to replace
+	 *  @param num          requests array size
+	 *  @param start        start address range
+	 *  @param size         address range size
+	 *  @param kernelRoute  kernel change requiring memory protection changes and patch reverting at unload
+	 *  @param force        continue on first error
+	 *  @param jumpType     jump type to use, relative short or absolute long
+	 *
+	 *  @return false if it at least one error happened
+	 */
+	bool routeMultipleInternal(size_t id, RouteRequest *requests, size_t num, mach_vm_address_t start=0, size_t size=0, bool kernelRoute=true, bool force=false, JumpType jumpType=JumpType::Auto);
+
 #ifdef LILU_KEXTPATCH_SUPPORT
 	/**
 	 *  Called at kext loading and unloading if kext listening is enabled
 	 */
 	static void onKextSummariesUpdated();
-	
+
 	/**
 	 *  A pointer to loaded kext information
 	 */
 	OSKextLoadedKextSummaryHeader **loadedKextSummaries {nullptr};
-	
+
 	/**
 	 *  A pointer to kext summaries update
 	 */
 	void (*orgUpdateLoadedKextSummaries)(void) {nullptr};
-	
+
 	/**
 	 *  Process already loaded kexts once at the start
 	 *
@@ -480,9 +617,9 @@ private:
 	 *  @param num       number of loaded kext summaries
 	 */
 	void processAlreadyLoadedKexts(OSKextLoadedKextSummary *summaries, size_t num);
-	
+
 #endif /* LILU_KEXTPATCH_SUPPORT */
-	
+
 	/**
 	 *  Kernel prelink image in case prelink is used
 	 */
@@ -492,7 +629,7 @@ private:
 	 *  Loaded kernel items
 	 */
 	evector<MachInfo *, MachInfo::deleter> kinfos;
-	
+
 	/**
 	 *  Applied patches
 	 */
@@ -503,31 +640,33 @@ private:
 	 *  Awaiting kext notificators
 	 */
 	evector<KextHandler *, KextHandler::deleter> khandlers;
-	
+
 	/**
 	 *  Awaiting already loaded kext list
 	 */
 	bool waitingForAlreadyLoadedKexts {false};
-	
+
 #endif /* LILU_KEXTPATCH_SUPPORT */
-	
+
 	/**
 	 *  Allocated pages
 	 */
 	evector<Page *, Page::deleter> kpages;
-	
+
 	/**
 	 *  Current error code
 	 */
 	Error code {Error::NoError};
 	static constexpr size_t INVALID {0};
-	
+
 	/**
 	 *  Jump instruction sizes
 	 */
 	static constexpr size_t SmallJump {1 + sizeof(int32_t)};
 	static constexpr size_t LongJump {6 + sizeof(uint64_t)};
-	
+	static constexpr uint8_t SmallJumpPrefix {0xE9};
+	static constexpr uint16_t LongJumpPrefix {0x25FF};
+
 	/**
 	 *  Possible kernel paths
 	 */

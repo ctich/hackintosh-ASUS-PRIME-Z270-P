@@ -68,11 +68,6 @@ extern proc_t kernproc;
 #define UNREACHABLE() do { __builtin_unreachable(); } while (0)
 
 /**
- *  For private fallback symbol definition
- */
-#define WEAKFUNC __attribute__((weak))
-
-/**
  *  Conditional logging to system log prefixed with you plugin name
  *
  *  @param cond  precondition
@@ -190,16 +185,6 @@ extern proc_t kernproc;
 #endif
 
 /**
- *  Deprecate the interface
- */
-#define DEPRECATE(x) __attribute__((deprecated(x)))
-
-/**
- *  Non-null argument
- */
-#define NONNULL __attribute__((nonnull))
-
-/**
  *  Macros to bypass kernel address printing protection
  */
 #define PRIKADDR "0x%08X%08X"
@@ -241,9 +226,29 @@ extern proc_t kernproc;
 #define EXPORT __attribute__((visibility("default")))
 
 /**
+ *  Ensure the symbol is not exported
+ */
+#define PRIVATE __attribute__((visibility("hidden")))
+
+/**
+ *  For private fallback symbol definition
+ */
+#define WEAKFUNC __attribute__((weak))
+
+/**
  *  Remove padding between fields
  */
 #define PACKED __attribute__((packed))
+
+/**
+ *  Deprecate the interface
+ */
+#define DEPRECATE(x) __attribute__((deprecated(x)))
+
+/**
+ *  Non-null argument
+ */
+#define NONNULL __attribute__((nonnull))
 
 /**
  *  This function is supposed to workaround missing entries in the system log.
@@ -517,7 +522,7 @@ namespace Buffer {
 		if (s > BufferMax) return nullptr;
 		return static_cast<T *>(kern_os_malloc(s));
 	}
-	
+
 	template <typename T>
 	inline bool resize(T *&buf, size_t size) {
 		size_t s = sizeof(T) * size;
@@ -527,10 +532,10 @@ namespace Buffer {
 			buf = nbuf;
 			return true;
 		}
-		
+
 		return false;
 	}
-	
+
 	template <typename T>
 	inline void deleter(T *buf NONNULL) {
 		lilu_os_free(buf);
@@ -547,7 +552,7 @@ struct Page {
 	 *  @return true on success
 	 */
 	EXPORT bool alloc();
-	
+
 	/**
 	 *  Sets page protection
 	 *
@@ -556,21 +561,21 @@ struct Page {
 	 *  @return true on success
 	 */
 	EXPORT bool protect(vm_prot_t prot);
-	
+
 	/**
 	 *  Deletes the page
 	 *
 	 *  @param p page
 	 */
 	EXPORT static void deleter(Page *p NONNULL);
-	
+
 	/**
 	 *  Creates a page object
 	 *
 	 *  @return pointer to new page object or nullptr
 	 */
 	EXPORT static Page *create();
-	
+
 	/**
 	 *  Page buffer
 	 */
@@ -585,7 +590,7 @@ class ThreadLocal {
 	/**
 	 *  A list of tread identifiers
 	 */
-	_Atomic(thread_t) threads[N];
+	_Atomic(thread_t) threads[N] {};
 
 	/**
 	 *  A list of value references
@@ -595,13 +600,8 @@ class ThreadLocal {
 public:
 	/**
 	 *  Initialise storage
-	 *
-	 *  @return true on success
 	 */
-	void init() {
-		for (auto &thread : threads)
-			atomic_init(&thread, nullptr);
-	}
+	void init() {}
 
 	/**
 	 *  Deinitialise storage
@@ -689,11 +689,11 @@ template <typename T, typename Y, void (*deleterT)(T)=emptyDeleter<T>, void (*de
 struct ppair {
 	T first;
 	Y second;
-	
+
 	static ppair *create() {
 		return new ppair;
 	}
-	
+
 	static void deleter(ppair *p NONNULL) {
 		deleterT(p->first);
 		deleterY(p->second);
@@ -723,7 +723,7 @@ public:
 	size_t size() const {
 		return cnt;
 	}
-	
+
 	/**
 	 *  Return pointer to the elements
 	 *  Valid until evector contents change
@@ -733,7 +733,7 @@ public:
 	T *data() const {
 		return ptr;
 	}
-	
+
 	/**
 	 *  Return last element id
 	 *
@@ -742,7 +742,7 @@ public:
 	size_t last() const {
 		return cnt-1;
 	}
-	
+
 	/**
 	 *  Return evector element reference
 	 *
@@ -753,7 +753,7 @@ public:
 	T &operator [](size_t index) {
 		return ptr[index];
 	}
-	
+
 	/**
 	 *  Return evector const element reference
 	 *
@@ -764,7 +764,7 @@ public:
 	const T &operator [](size_t index) const {
 		return ptr[index];
 	}
-	
+
 	/**
 	 *  Reserve memory for at least N elements
 	 *
@@ -783,10 +783,10 @@ public:
 				return nullptr;
 			}
 		}
-		
+
 		return ptr;
 	}
-	
+
 	/**
 	 *  Erase evector element
 	 *
@@ -803,7 +803,7 @@ public:
 			rsvd = 0;
 		}
 	}
-	
+
 	/**
 	 *  Add an element to evector end
 	 *
@@ -818,11 +818,11 @@ public:
 			cnt++;
 			return true;
 		}
-		
+
 		SYSLOG("evector", "insertion failure");
 		return false;
 	}
-	
+
 	/**
 	 *  Add an element to evector end
 	 *
@@ -837,15 +837,15 @@ public:
 			cnt++;
 			return true;
 		}
-		
+
 		SYSLOG("evector", "insertion failure");
 		return false;
 	}
-	
+
 	evector() = default;
 	evector(const evector &) = delete;
 	evector operator =(const evector &) = delete;
-	
+
 	/**
 	 * Free the used memory
 	 */
