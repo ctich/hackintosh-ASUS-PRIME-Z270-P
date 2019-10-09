@@ -337,7 +337,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/Lilu</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -351,7 +353,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VirtualSMC</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -365,7 +369,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCProcessor</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -379,7 +385,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCSuperIO</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -393,7 +401,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -407,7 +417,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -421,7 +433,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/UsbPrimeZ270P</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -435,7 +449,9 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RealtekRTL8111</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
@@ -450,7 +466,9 @@
 				<false/>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleTyMCEDriver</string>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
 				<string></string>
 			</dict>
 		</array>
@@ -469,43 +487,11 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>1PMEC for macOs Mojave</string>
+				<string>1PMEC2t</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				SIP5BnISSIsF
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleACPIEC</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MatchKernel</key>
-				<string>18.7.0</string>
-				<key>Replace</key>
-				<data>
-				SIP5Bum9AAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>1PMEC2t for macOs Mojave</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				hMAPhY0AAAA=
@@ -517,7 +503,9 @@
 				<key>Mask</key>
 				<data>
 				</data>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
+				<string>19.0.0</string>
+				<key>MinKernel</key>
 				<string>18.7.0</string>
 				<key>Replace</key>
 				<data>
@@ -533,11 +521,11 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>1PMEC for macOs Catalina</string>
+				<string>1PMEC</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				SIP5BnISSIsF
@@ -549,43 +537,13 @@
 				<key>Mask</key>
 				<data>
 				</data>
-				<key>MatchKernel</key>
+				<key>MaxKernel</key>
 				<string>19.0.0</string>
+				<key>MinKernel</key>
+				<string>18.7.0</string>
 				<key>Replace</key>
 				<data>
 				SIP5Bum9AAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>1PMEC2t for macOs Catalina</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				hMAPhY0AAAA=
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleACPIEC</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MatchKernel</key>
-				<string>19.0.0</string>
-				<key>Replace</key>
-				<data>
-				hMDpNgAAAAA=
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -605,7 +563,7 @@
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
-			<true/>
+			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>LapicKernelPanic</key>
@@ -727,7 +685,7 @@
 				<string>-v keepsyms=1 debug=0x100 darkwake=0</string>
 				<key>csr-active-config</key>
 				<data>
-				AAAAAA==
+				ZwIAAA==
 				</data>
 			</dict>
 		</dict>
@@ -839,11 +797,11 @@
 			<string>Mac-BE088AF8C5EB4FA2</string>
 			<key>FirmwareFeatures</key>
 			<data>
-			N+EP/AAAAAA=
+			dvUP/QAAAAA=
 			</data>
 			<key>FirmwareFeaturesMask</key>
 			<data>
-			P/8f/wAAAAA=
+			f/8f/wAAAAA=
 			</data>
 			<key>MLB</key>
 			<string>123456789123456789</string>
@@ -855,11 +813,11 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>07/22/2019</string>
+			<string>09/13/2019</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>176.0.0.0.0</string>
+			<string>178.0.0.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
@@ -886,11 +844,11 @@
 			<string>Mac-BE088AF8C5EB4FA2</string>
 			<key>FirmwareFeatures</key>
 			<data>
-			N+EP/AAAAAA=
+			dvUP/QAAAAA=
 			</data>
 			<key>FirmwareFeaturesMask</key>
 			<data>
-			P/8f/wAAAAA=
+			f/8f/wAAAAA=
 			</data>
 			<key>MemoryFormFactor</key>
 			<integer>9</integer>
@@ -934,10 +892,28 @@
 		<array>
 			<string>HFSPlus.efi</string>
 			<string>ApfsDriverLoader.efi</string>
-			<string>AppleGenericInput.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>VirtualSmc.efi</string>
 		</array>
+		<key>Input</key>
+		<dict>
+			<key>KeyForgetThreshold</key>
+			<integer>5</integer>
+			<key>KeyMergeThreshold</key>
+			<integer>2</integer>
+			<key>KeySupport</key>
+			<true/>
+			<key>KeySupportMode</key>
+			<string>Auto</string>
+			<key>KeySwap</key>
+			<false/>
+			<key>PointerSupport</key>
+			<false/>
+			<key>PointerSupportMode</key>
+			<string>ASUS</string>
+			<key>TimerResolution</key>
+			<integer>50000</integer>
+		</dict>
 		<key>Protocols</key>
 		<dict>
 			<key>AppleBootPolicy</key>

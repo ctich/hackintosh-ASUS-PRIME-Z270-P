@@ -442,13 +442,6 @@
 		<true/>
 		<key>Properties</key>
 		<dict>
-			<key>#SecondaryGPU</key>
-			<dict>
-				<key>device-id</key>
-				<data>
-				/////w==
-				</data>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>built-in</key>
@@ -473,6 +466,13 @@
 				</data>
 				<key>model</key>
 				<string>Intel HD Graphics 630</string>
+			</dict>
+			<key>SecondaryGPU</key>
+			<dict>
+				<key>device-id</key>
+				<data>
+				/////w==
+				</data>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -734,7 +734,7 @@
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.13 Release kernel</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				igKEwHRE
@@ -748,26 +748,18 @@
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.14 Release kernel</string>
 				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				igKEwHRC
-				</data>
-				<key>MatchOS</key>
-				<string>10.14.4</string>
-				<key>Replace</key>
-				<data>
-				igKEwOtC
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14 Release kernel</string>
-				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AIoChMB0
+				</data>
+				<key>MaskFind</key>
+				<data>
+				////////
+				</data>
+				<key>MaskReplace</key>
+				<data>
+				AAAAAP8A
 				</data>
 				<key>MatchOS</key>
 				<string>10.14.6</string>
@@ -840,6 +832,8 @@
 				</data>
 			</dict>
 		</array>
+		<key>PanicNoKextDump</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -855,11 +849,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>06/17/2019</string>
+		<string>09/13/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM183.88Z.F000.B00.1906171613</string>
+		<string>IM183.88Z.F000.B00.1909131926</string>
 		<key>Board-ID</key>
 		<string>Mac-BE088AF8C5EB4FA2</string>
 		<key>BoardManufacturer</key>
@@ -877,7 +871,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>175.0.0.0.0</string>
+		<string>178.0.0.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
