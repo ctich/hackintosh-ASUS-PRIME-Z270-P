@@ -137,13 +137,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					U0FUMA==
-					</data>
+					<data>U0FUMA==</data>
 					<key>Replace</key>
-					<data>
-					U0FUQQ==
-					</data>
+					<data>U0FUQQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -151,13 +147,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					UFBNQw==
-					</data>
+					<data>UFBNQw==</data>
 					<key>Replace</key>
-					<data>
-					UE1DUg==
-					</data>
+					<data>UE1DUg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -165,13 +157,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					QUxTRA==
-					</data>
+					<data>QUxTRA==</data>
 					<key>Replace</key>
-					<data>
-					QUxTMA==
-					</data>
+					<data>QUxTMA==</data>
 				</dict>
 			</array>
 			<key>ReuseFFFF</key>
@@ -341,9 +329,7 @@
 						<key>Key</key>
 						<string>AAPL,ig-platform-id</string>
 						<key>Value</key>
-						<data>
-						AwASWQ==
-						</data>
+						<data>AwASWQ==</data>
 					</dict>
 				</array>
 				<key>PciAddr</key>
@@ -358,9 +344,7 @@
 						<key>Key</key>
 						<string>built-in</string>
 						<key>Value</key>
-						<data>
-						AA==
-						</data>
+						<data>AA==</data>
 					</dict>
 					<dict>
 						<key>Key</key>
@@ -389,9 +373,7 @@
 						<key>Key</key>
 						<string>layout-id</string>
 						<key>Value</key>
-						<data>
-						CwAAAA==
-						</data>
+						<data>CwAAAA==</data>
 					</dict>
 				</array>
 				<key>PciAddr</key>
@@ -445,34 +427,26 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>
-				NAAAAA==
-				</data>
+				<data>NAAAAA==</data>
 				<key>model</key>
 				<string>Realtek ALC887</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwASWQ==
-				</data>
+				<data>AwASWQ==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 630</string>
 			</dict>
 			<key>SecondaryGPU</key>
 			<dict>
 				<key>device-id</key>
-				<data>
-				/////w==
-				</data>
+				<data>/////w==</data>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -625,7 +599,8 @@
 	<key>Graphics</key>
 	<dict>
 		<key>#Connectors</key>
-		<array/>
+		<array>
+		</array>
 		<key>#DualLink</key>
 		<integer>0</integer>
 		<key>#FBName</key>
@@ -642,13 +617,9 @@
 		<array>
 			<dict>
 				<key>Find</key>
-				<data>
-				gAeoAqAF
-				</data>
+				<data>gAeoAqAF</data>
 				<key>Replace</key>
-				<data>
-				gAeoAjgE
-				</data>
+				<data>gAeoAjgE</data>
 			</dict>
 		</array>
 		<key>#VRAM</key>
@@ -696,15 +667,11 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				RXh0ZXJuYWw=
-				</data>
+				<data>RXh0ZXJuYWw=</data>
 				<key>MatchOS</key>
 				<string>All</string>
 				<key>Replace</key>
-				<data>
-				SW50ZXJuYWw=
-				</data>
+				<data>SW50ZXJuYWw=</data>
 			</dict>
 		</array>
 		<key>#FakeCPUID</key>
@@ -736,13 +703,9 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				igKEwHRE
-				</data>
+				<data>igKEwHRE</data>
 				<key>Replace</key>
-				<data>
-				igKEwOtE
-				</data>
+				<data>igKEwOtE</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -750,23 +713,15 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				AIoChMB0
-				</data>
+				<data>AIoChMB0</data>
 				<key>MaskFind</key>
-				<data>
-				////////
-				</data>
+				<data>////////</data>
 				<key>MaskReplace</key>
-				<data>
-				AAAAAP8A
-				</data>
+				<data>AAAAAP8A</data>
 				<key>MatchOS</key>
 				<string>10.14.6</string>
 				<key>Replace</key>
-				<data>
-				AIoChMDr
-				</data>
+				<data>AIoChMDr</data>
 			</dict>
 		</array>
 		<key>KextsToPatch</key>
@@ -777,9 +732,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				g/sPD4cLBAAA
-				</data>
+				<data>g/sPD4cLBAAA</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
@@ -787,9 +740,7 @@
 				<key>Name</key>
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
-				<data>
-				g/s/D4cLBAAA
-				</data>
+				<data>g/s/D4cLBAAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -797,9 +748,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				QYP/Dw+DlAQAAA==
-				</data>
+				<data>QYP/Dw+DlAQAAA==</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
@@ -807,9 +756,7 @@
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
-				<data>
-				QYP/Pw+DlAQAAA==
-				</data>
+				<data>QYP/Pw+DlAQAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -817,9 +764,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				g+MP0+NBCd8=
-				</data>
+				<data>g+MP0+NBCd8=</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
@@ -827,9 +772,7 @@
 				<key>Name</key>
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
-				<data>
-				g+M/0+NBCd8=
-				</data>
+				<data>g+M/0+NBCd8=</data>
 			</dict>
 		</array>
 		<key>PanicNoKextDump</key>
@@ -849,11 +792,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/13/2019</string>
+		<string>10/30/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM183.88Z.F000.B00.1909131926</string>
+		<string>IM183.88Z.F000.B00.1910301943</string>
 		<key>Board-ID</key>
 		<string>Mac-BE088AF8C5EB4FA2</string>
 		<key>BoardManufacturer</key>
@@ -871,7 +814,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>178.0.0.0.0</string>
+		<string>179.0.0.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>

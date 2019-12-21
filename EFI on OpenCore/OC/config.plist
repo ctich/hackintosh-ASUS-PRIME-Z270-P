@@ -57,14 +57,11 @@
 				<key>Enabled</key>
 				<false/>
 				<key>OemTableId</key>
-				<data>
-				</data>
+				<data></data>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				RE1BUg==
-				</data>
+				<data>RE1BUg==</data>
 			</dict>
 			<dict>
 				<key>All</key>
@@ -74,15 +71,11 @@
 				<key>Enabled</key>
 				<false/>
 				<key>OemTableId</key>
-				<data>
-				Q3B1UG0=
-				</data>
+				<data>Q3B1UG0=</data>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				U1NEVA==
-				</data>
+				<data>U1NEVA==</data>
 			</dict>
 			<dict>
 				<key>All</key>
@@ -92,15 +85,11 @@
 				<key>Enabled</key>
 				<false/>
 				<key>OemTableId</key>
-				<data>
-				Q3B1MElzdA==
-				</data>
+				<data>Q3B1MElzdA==</data>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				U1NEVA==
-				</data>
+				<data>U1NEVA==</data>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -113,31 +102,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				U0FUMA==
-				</data>
+				<data>U0FUMA==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Replace</key>
-				<data>
-				U0FUQQ==
-				</data>
+				<data>U0FUQQ==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -147,28 +128,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				UFBNQw==
-				</data>
+				<data>UFBNQw==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Replace</key>
-				<data>
-				UE1DUg==
-				</data>
+				<data>UE1DUg==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -178,28 +152,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				QUxTRA==
-				</data>
+				<data>QUxTRA==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Replace</key>
-				<data>
-				QUxTMA==
-				</data>
+				<data>QUxTMA==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -209,28 +176,99 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				SERBUw==
-				</data>
+				<data>SERBUw==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Replace</key>
-				<data>
-				SERFRg==
-				</data>
+				<data>SERFRg==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ACPI: cannot translate ACPI object 14 _PR0 -&gt; _PP6</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>CF9QUjA=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>CF9QUDY=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ACPI: cannot translate ACPI object 14 _PR2 -&gt; _PP8</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>CF9QUjI=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>CF9QUDg=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ACPI: cannot translate ACPI object 14 _PR3 -&gt; _PP9</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>CF9QUjM=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>CF9QUDk=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -276,6 +314,25 @@
 			<key>ShrinkMemoryMap</key>
 			<false/>
 		</dict>
+		<key>MmioWhitelist</key>
+		<array>
+			<dict>
+				<key>Address</key>
+				<integer>4275159040</integer>
+				<key>Comment</key>
+				<string>Haswell: SB_RCBA is a 0x4 page memory region, containing SPI_BASE at 0x3800 (SPI_BASE_ADDRESS)</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Address</key>
+				<integer>4278190080</integer>
+				<key>Comment</key>
+				<string>Generic: PCI root is a 0x1000 page memory region used by some firmwares</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>DeviceProperties</key>
 	<dict>
@@ -286,9 +343,7 @@
 				<key>AAPL,slot-name</key>
 				<string>Built-in</string>
 				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 				<key>device_type</key>
 				<string>Network controller</string>
 			</dict>
@@ -301,18 +356,14 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<data>
-				NAAAAA==
-				</data>
+				<data>NAAAAA==</data>
 				<key>model</key>
 				<string>Realtek ALC887</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwASWQ==
-				</data>
+				<data>AwASWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Built-in</string>
 				<key>hda-gfx</key>
@@ -456,6 +507,22 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>SATA-100-200-300-series.kext</string>
+				<key>Comment</key>
+				<string>Inject SATA-100-200-300-series</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>
@@ -475,11 +542,9 @@
 		<key>Emulate</key>
 		<dict>
 			<key>Cpuid1Data</key>
-			<data>
-			</data>
+			<data></data>
 			<key>Cpuid1Mask</key>
-			<data>
-			</data>
+			<data></data>
 		</dict>
 		<key>Patch</key>
 		<array>
@@ -493,27 +558,21 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				hMAPhY0AAAA=
-				</data>
+				<data>hMAPhY0AAAA=</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleACPIEC</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
-				<string>19.0.0</string>
+				<string>19.2.0</string>
 				<key>MinKernel</key>
 				<string>18.7.0</string>
 				<key>Replace</key>
-				<data>
-				hMDpNgAAAAA=
-				</data>
+				<data>hMDpNgAAAAA=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -527,27 +586,21 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				SIP5BnISSIsF
-				</data>
+				<data>SIP5BnISSIsF</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleACPIEC</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
-				<string>19.0.0</string>
+				<string>19.2.0</string>
 				<key>MinKernel</key>
 				<string>18.7.0</string>
 				<key>Replace</key>
-				<data>
-				SIP5Bum9AAAA
-				</data>
+				<data>SIP5Bum9AAAA</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -570,7 +623,7 @@
 			<false/>
 			<key>PanicNoKextDump</key>
 			<true/>
-			<key>ThirdPartyTrim</key>
+			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
 			<false/>
@@ -593,7 +646,7 @@
 			<key>HideSelf</key>
 			<true/>
 			<key>PollAppleHotKeys</key>
-			<false/>
+			<true/>
 			<key>Resolution</key>
 			<string>Max</string>
 			<key>ShowPicker</key>
@@ -612,7 +665,7 @@
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
 			<key>Target</key>
-			<integer>19</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -673,9 +726,7 @@
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<dict>
 				<key>UIScale</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
@@ -684,9 +735,7 @@
 				<key>boot-args</key>
 				<string>-v keepsyms=1 debug=0x100 darkwake=0</string>
 				<key>csr-active-config</key>
-				<data>
-				ZwIAAA==
-				</data>
+				<data>ZwIAAA==</data>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -742,9 +791,7 @@
 			<key>BoardProduct</key>
 			<string>Mac-BE088AF8C5EB4FA2</string>
 			<key>BoardRevision</key>
-			<data>
-			Hw==
-			</data>
+			<data>Hw==</data>
 			<key>DevicePathsSupported</key>
 			<integer>1</integer>
 			<key>FSBFrequency</key>
@@ -754,17 +801,11 @@
 			<key>PlatformName</key>
 			<string>platform</string>
 			<key>SmcBranch</key>
-			<data>
-			ajEzM180XzU=
-			</data>
+			<data>ajEzM180XzU=</data>
 			<key>SmcPlatform</key>
-			<data>
-			ajEzNQAAAAA=
-			</data>
+			<data>ajEzNQAAAAA=</data>
 			<key>SmcRevision</key>
-			<data>
-			AkEPAAAB
-			</data>
+			<data>AkEPAAAC</data>
 			<key>StartupPowerEvents</key>
 			<integer>0</integer>
 			<key>SystemProductName</key>
@@ -779,9 +820,7 @@
 			<key>MLB</key>
 			<string>123456789123456789</string>
 			<key>ROM</key>
-			<data>
-			EjRWeJEj
-			</data>
+			<data>EjRWeJEj</data>
 			<key>SpoofVendor</key>
 			<false/>
 			<key>SystemProductName</key>
@@ -796,28 +835,22 @@
 			<key>BID</key>
 			<string>Mac-BE088AF8C5EB4FA2</string>
 			<key>FirmwareFeatures</key>
-			<data>
-			dvUP/QAAAAA=
-			</data>
+			<data>dvUP/QAAAAA=</data>
 			<key>FirmwareFeaturesMask</key>
-			<data>
-			f/8f/wAAAAA=
-			</data>
+			<data>f/8f/wAAAAA=</data>
 			<key>MLB</key>
 			<string>123456789123456789</string>
 			<key>ROM</key>
-			<data>
-			EjRWeJEj
-			</data>
+			<data>EjRWeJEj</data>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>09/13/2019</string>
+			<string>10/30/2019</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>178.0.0.0.0</string>
+			<string>179.0.0.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
@@ -843,13 +876,9 @@
 			<key>ChassisVersion</key>
 			<string>Mac-BE088AF8C5EB4FA2</string>
 			<key>FirmwareFeatures</key>
-			<data>
-			dvUP/QAAAAA=
-			</data>
+			<data>dvUP/QAAAAA=</data>
 			<key>FirmwareFeaturesMask</key>
-			<data>
-			f/8f/wAAAAA=
-			</data>
+			<data>f/8f/wAAAAA=</data>
 			<key>MemoryFormFactor</key>
 			<integer>9</integer>
 			<key>PlatformFeature</key>
@@ -857,9 +886,7 @@
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>SmcVersion</key>
-			<data>
-			AAAAAAAAAAAAAAAAAAAAAA==
-			</data>
+			<data>AAAAAAAAAAAAAAAAAAAAAA==</data>
 			<key>SystemFamily</key>
 			<string>iMac</string>
 			<key>SystemManufacturer</key>
@@ -933,7 +960,7 @@
 			<key>DeviceProperties</key>
 			<false/>
 			<key>FirmwareVolume</key>
-			<true/>
+			<false/>
 			<key>HashServices</key>
 			<false/>
 			<key>UnicodeCollation</key>
@@ -953,13 +980,19 @@
 			<true/>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>ReconnectOnResChange</key>
+			<false/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
 			<false/>
+			<key>RequestBootVarFallback</key>
+			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
 			<key>SanitiseClearScreen</key>
+			<false/>
+			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
 	</dict>
