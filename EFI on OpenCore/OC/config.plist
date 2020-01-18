@@ -287,6 +287,25 @@
 	</dict>
 	<key>Booter</key>
 	<dict>
+		<key>MmioWhitelist</key>
+		<array>
+			<dict>
+				<key>Address</key>
+				<integer>4275159040</integer>
+				<key>Comment</key>
+				<string>Haswell: SB_RCBA is a 0x4 page memory region, containing SPI_BASE at 0x3800 (SPI_BASE_ADDRESS)</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Address</key>
+				<integer>4278190080</integer>
+				<key>Comment</key>
+				<string>Generic: PCI root is a 0x1000 page memory region used by some firmwares</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
+		</array>
 		<key>Quirks</key>
 		<dict>
 			<key>AvoidRuntimeDefrag</key>
@@ -313,26 +332,9 @@
 			<true/>
 			<key>ShrinkMemoryMap</key>
 			<false/>
+			<key>SignalAppleOS</key>
+			<false/>
 		</dict>
-		<key>MmioWhitelist</key>
-		<array>
-			<dict>
-				<key>Address</key>
-				<integer>4275159040</integer>
-				<key>Comment</key>
-				<string>Haswell: SB_RCBA is a 0x4 page memory region, containing SPI_BASE at 0x3800 (SPI_BASE_ADDRESS)</string>
-				<key>Enabled</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Address</key>
-				<integer>4278190080</integer>
-				<key>Comment</key>
-				<string>Generic: PCI root is a 0x1000 page memory region used by some firmwares</string>
-				<key>Enabled</key>
-				<false/>
-			</dict>
-		</array>
 	</dict>
 	<key>DeviceProperties</key>
 	<dict>
@@ -509,13 +511,29 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>SATA-100-200-300-series.kext</string>
+				<string>SATA200Series.kext</string>
 				<key>Comment</key>
-				<string>Inject SATA-100-200-300-series</string>
+				<string>Inject SATA200Series.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SATA200Series</string>
+				<key>MaxKernel</key>
 				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>NVMeFix.kext</string>
+				<key>Comment</key>
+				<string>Inject NVMeFix.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NVMeFix</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -613,16 +631,22 @@
 			<false/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
+			<key>AppleXcpmForceBoost</key>
+			<false/>
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
+			<key>IncreasePciBarSize</key>
+			<false/>
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>PanicNoKextDump</key>
 			<true/>
+			<key>PowerTimeoutKernelPanic</key>
+			<false/>
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
@@ -684,8 +708,10 @@
 		<dict>
 			<key>AllowNvramReset</key>
 			<false/>
+			<key>AuthRestart</key>
+			<true/>
 			<key>ExposeSensitiveData</key>
-			<string>2</string>
+			<string>6</string>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>RequireSignature</key>
@@ -733,7 +759,7 @@
 				<key>Comment</key>
 				<string>APPLE_BOOT_VARIABLE_GUID</string>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 darkwake=0</string>
+				<string>-v keepsyms=1 debug=0x100 darkwake=0 shikigva=16</string>
 				<key>csr-active-config</key>
 				<data>ZwIAAA==</data>
 			</dict>
@@ -753,6 +779,8 @@
 			</dict>
 		</dict>
 		<key>LegacyEnable</key>
+		<false/>
+		<key>LegacyOverwrite</key>
 		<false/>
 		<key>LegacySchema</key>
 		<dict>
@@ -779,6 +807,8 @@
 				<string>BootOrder</string>
 			</array>
 		</dict>
+		<key>WriteFlash</key>
+		<true/>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -811,24 +841,24 @@
 			<key>SystemProductName</key>
 			<string>iMac18,3</string>
 			<key>SystemSerialNumber</key>
-			<string>123456789</string>
+			<string>C02V5BY0J1GJ</string>
 			<key>SystemUUID</key>
-			<string>12345678-2222-1111-0000-123456789123</string>
+			<string>9B6B7D2C-06A1-42DF-9073-8167436164FF</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>123456789123456789</string>
+			<string>C02731102QXJ0PG1H</string>
 			<key>ROM</key>
-			<data>EjRWeJEj</data>
+			<data>mir8YWT/</data>
 			<key>SpoofVendor</key>
 			<false/>
 			<key>SystemProductName</key>
 			<string>iMac18,3</string>
 			<key>SystemSerialNumber</key>
-			<string>123456789</string>
+			<string>C02V5BY0J1GJ</string>
 			<key>SystemUUID</key>
-			<string>12345678-2222-1111-0000-123456789123</string>
+			<string>9B6B7D2C-06A1-42DF-9073-8167436164FF</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -839,18 +869,18 @@
 			<key>FirmwareFeaturesMask</key>
 			<data>f/8f/wAAAAA=</data>
 			<key>MLB</key>
-			<string>123456789123456789</string>
+			<string>C02731102QXJ0PG1H</string>
 			<key>ROM</key>
-			<data>EjRWeJEj</data>
+			<data>mir8YWT/</data>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>10/30/2019</string>
+			<string>12/16/2019</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>179.0.0.0.0</string>
+			<string>180.0.0.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
@@ -860,7 +890,7 @@
 			<key>BoardProduct</key>
 			<string>Mac-BE088AF8C5EB4FA2</string>
 			<key>BoardSerialNumber</key>
-			<string>123456789123456789</string>
+			<string>C02731102QXJ0PG1H</string>
 			<key>BoardType</key>
 			<integer>10</integer>
 			<key>BoardVersion</key>
@@ -870,7 +900,7 @@
 			<key>ChassisManufacturer</key>
 			<string>Apple Inc.</string>
 			<key>ChassisSerialNumber</key>
-			<string>123456789</string>
+			<string>C02V5BY0J1GJ</string>
 			<key>ChassisType</key>
 			<integer>9</integer>
 			<key>ChassisVersion</key>
@@ -896,9 +926,9 @@
 			<key>SystemSKUNumber</key>
 			<string></string>
 			<key>SystemSerialNumber</key>
-			<string>123456789</string>
+			<string>C02V5BY0J1GJ</string>
 			<key>SystemUUID</key>
-			<string>12345678-2222-1111-0000-123456789123</string>
+			<string>9B6B7D2C-06A1-42DF-9073-8167436164FF</string>
 			<key>SystemVersion</key>
 			<string>1.0</string>
 		</dict>
@@ -920,7 +950,6 @@
 			<string>HFSPlus.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
-			<string>VirtualSmc.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -962,6 +991,8 @@
 			<key>FirmwareVolume</key>
 			<false/>
 			<key>HashServices</key>
+			<false/>
+			<key>OSInfo</key>
 			<false/>
 			<key>UnicodeCollation</key>
 			<false/>

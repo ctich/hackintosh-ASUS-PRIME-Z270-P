@@ -161,6 +161,36 @@
 					<key>Replace</key>
 					<data>QUxTMA==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ACPI: cannot translate ACPI object 14 _PR0 -&gt; _PP6</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>CF9QUjA=</data>
+					<key>Replace</key>
+					<data>CF9QUDY=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ACPI: cannot translate ACPI object 14 _PR2 -&gt; _PP8</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>CF9QUjI=</data>
+					<key>Replace</key>
+					<data>CF9QUDg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ACPI: cannot translate ACPI object 14 _PR3 -&gt; _PP9</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>CF9QUjM=</data>
+					<key>Replace</key>
+					<data>CF9QUDk=</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -175,7 +205,7 @@
 			</dict>
 		</array>
 		<key>FixHeaders</key>
-		<false/>
+		<true/>
 		<key>FixMCFG</key>
 		<false/>
 		<key>HaltEnabler</key>
@@ -792,11 +822,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>10/30/2019</string>
+		<string>12/16/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM183.88Z.F000.B00.1910301943</string>
+		<string>IM183.88Z.F000.B00.1912161654</string>
 		<key>Board-ID</key>
 		<string>Mac-BE088AF8C5EB4FA2</string>
 		<key>BoardManufacturer</key>
@@ -814,7 +844,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>179.0.0.0.0</string>
+		<string>180.0.0.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
