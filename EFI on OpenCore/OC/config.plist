@@ -353,6 +353,8 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Built-in</string>
+				<key>No-hda-gfx</key>
+				<data>qqqqqqo=</data>
 				<key>device_type</key>
 				<string>Multimedia controller</string>
 				<key>hda-gfx</key>
@@ -584,7 +586,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>19.2.0</string>
+				<string>19.3.0</string>
 				<key>MinKernel</key>
 				<string>18.7.0</string>
 				<key>Replace</key>
@@ -612,7 +614,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>19.2.0</string>
+				<string>19.3.0</string>
 				<key>MinKernel</key>
 				<string>18.7.0</string>
 				<key>Replace</key>
@@ -711,7 +713,7 @@
 			<key>AuthRestart</key>
 			<true/>
 			<key>ExposeSensitiveData</key>
-			<string>6</string>
+			<string>14</string>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>RequireSignature</key>
@@ -720,6 +722,8 @@
 			<false/>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
+			<key>AllowSetDefault</key>
+			<false/>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -859,6 +863,8 @@
 			<string>C02V5BY0J1GJ</string>
 			<key>SystemUUID</key>
 			<string>9B6B7D2C-06A1-42DF-9073-8167436164FF</string>
+			<key>AdviseWindows</key>
+			<false/>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -995,6 +1001,8 @@
 			<key>OSInfo</key>
 			<false/>
 			<key>UnicodeCollation</key>
+			<false/>
+			<key>AppleSmcIo</key>
 			<false/>
 		</dict>
 		<key>Quirks</key>

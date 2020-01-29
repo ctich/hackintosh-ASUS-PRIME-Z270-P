@@ -712,7 +712,7 @@
 			<string>\System\Library\Extensions\AMDFramebuffer.kext</string>
 		</array>
 		<key>AppleIntelCPUPM</key>
-		<false/>
+		<true/>
 		<key>AppleRTC</key>
 		<false/>
 		<key>Debug</key>
@@ -724,7 +724,7 @@
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
-		<false/>
+		<true/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -756,6 +756,34 @@
 		</array>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>External icons patch</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>RXh0ZXJuYWw=</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleAHCIPort</string>
+				<key>Replace</key>
+				<data>SW50ZXJuYWw=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>AAAAAAAAAAAAAAA=</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>USB Port Limit Patch 1 ©PMHeart</string>
@@ -803,6 +831,70 @@
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
 				<data>g+M/0+NBCd8=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port Limit Patch 1 PMHeart/DalianSky</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g/sPDw==</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>g/s/Dw==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port Limit Patch 2 PMHeart/DalianSky</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g/kPDw==</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>g/k/Dw==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>1PMEC2t by @chrome</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>hMAPhY0AAAA=</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleACPIEC</string>
+				<key>Replace</key>
+				<data>hMDpNgAAAAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>1PMEC by @chrome</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>SIP5BnISSIsF</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleACPIEC</string>
+				<key>Replace</key>
+				<data>SIP5Bum9AAAA</data>
 			</dict>
 		</array>
 		<key>PanicNoKextDump</key>
