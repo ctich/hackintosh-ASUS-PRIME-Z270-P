@@ -8,6 +8,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>add SSDT-OC-XOSI</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-OC-XOSI.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>add device EC</string>
 				<key>Enabled</key>
 				<true/>
@@ -16,27 +24,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>add device ECDT</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-ECDT.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>add device Plugin-type</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-Plugin.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>add device SMBUS</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-SMBUS.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -170,19 +162,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change HDAS to HDEF</string>
+				<string>change _OSI to XOSI, pair with SSDT-XOSI.aml</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
-				<data>SERBUw==</data>
+				<data>X09TSQ==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
 				<data></data>
 				<key>Replace</key>
-				<data>SERFRg==</data>
+				<data>WE9TSQ==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -332,6 +324,8 @@
 			<false/>
 			<key>ProvideCustomSlide</key>
 			<false/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<false/>
 			<key>SetupVirtualMap</key>
@@ -658,7 +652,7 @@
 			<key>PanicNoKextDump</key>
 			<true/>
 			<key>PowerTimeoutKernelPanic</key>
-			<false/>
+			<true/>
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
@@ -668,7 +662,8 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array/>
+		<array>
+		</array>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -704,6 +699,8 @@
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
+			<key>SerialInit</key>
+			<false/>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
@@ -730,8 +727,6 @@
 			<false/>
 			<key>AuthRestart</key>
 			<true/>
-			<key>BlacklistAppleUpdate</key>
-			<false/>
 			<key>BootProtect</key>
 			<string>None</string>
 			<key>ExposeSensitiveData</key>
@@ -753,17 +748,31 @@
 				<key>Name</key>
 				<string>UEFI Shell</string>
 				<key>Path</key>
-				<string>Shell.efi</string>
+				<string>OpenShell.efi</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Memory testing utility</string>
+				<string>Clean Nvram</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Name</key>
 				<string>Clean Nvram</string>
 				<key>Path</key>
 				<string>CleanNvram.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>HdaCodecDump</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>HdaCodecDump</string>
+				<key>Path</key>
+				<string>HdaCodecDump.efi</string>
 			</dict>
 		</array>
 	</dict>
@@ -781,7 +790,7 @@
 				<key>Comment</key>
 				<string>APPLE_BOOT_VARIABLE_GUID</string>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 darkwake=0 shikigva=80</string>
+				<string>keepsyms=1 debug=0x100 darkwake=0 shikigva=16</string>
 				<key>csr-active-config</key>
 				<data>ZwIAAA==</data>
 			</dict>
@@ -900,11 +909,11 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>04/24/2020</string>
+			<string>06/16/2020</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>183.0.0.0.0</string>
+			<string>428.0.0.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
@@ -971,6 +980,8 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>GlobalConnect</key>
+			<false/>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
@@ -1049,6 +1060,8 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UgaPassThrough</key>
+			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -1059,6 +1072,8 @@
 			<key>AppleDebugLog</key>
 			<false/>
 			<key>AppleEvent</key>
+			<false/>
+			<key>AppleFramebufferInfo</key>
 			<false/>
 			<key>AppleImageConversion</key>
 			<false/>
