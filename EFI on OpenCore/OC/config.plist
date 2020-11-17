@@ -1110,8 +1110,6 @@
 			<data>dvUP/QAAAAA=</data>
 			<key>FirmwareFeaturesMask</key>
 			<data>P/8f/wAAAAA=</data>
-			<key>MemoryFormFactor</key>
-			<integer>9</integer>
 			<key>PlatformFeature</key>
 			<integer>0</integer>
 			<key>ProcessorType</key>
