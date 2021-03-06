@@ -681,6 +681,8 @@
                 <false/>
                 <key>PanicNoKextDump</key>
                 <true/>
+                <key>SetApfsTrimTimeout</key>
+                <integer>-1</integer>
                 <key>PowerTimeoutKernelPanic</key>
                 <true/>
                 <key>ThirdPartyDrives</key>
@@ -710,6 +712,10 @@
                 <string>None</string>
                 <key>HideAuxiliary</key>
                 <true/>
+                <key>LauncherOption</key>
+                <string>Disabled</string>
+                <key>LauncherPath</key>
+                <string>Default</string>
                 <key>PickerAttributes</key>
                 <integer>17</integer>
                 <key>PickerAudioAssist</key>
@@ -777,8 +783,6 @@
                 <true/>
                 <key>BlacklistAppleUpdate</key>
                 <true/>
-                <key>BootProtect</key>
-                <string>Bootstrap</string>
                 <key>DmgLoading</key>
                 <string>Signed</string>
                 <key>EnablePassword</key>
@@ -960,6 +964,8 @@
             <dict>
                 <key>AdviseWindows</key>
                 <false/>
+                <key>MaxBIOSVersion</key>
+                <false/>
                 <key>MLB</key>
                 <string>C02731102QXJ0PG1H</string>
                 <key>ProcessorType</key>
@@ -1077,6 +1083,8 @@
                 <data>dvUP/QAAAAA=</data>
                 <key>FirmwareFeaturesMask</key>
                 <data>P/8f/wAAAAA=</data>
+                <key>SystemSerialNumber</key>
+                <string>C02V5BY0J1GJ</string>
                 <key>MLB</key>
                 <string>C02731102QXJ0PG1H</string>
                 <key>ROM</key>
@@ -1087,11 +1095,11 @@
             <key>SMBIOS</key>
             <dict>
                 <key>BIOSReleaseDate</key>
-                <string>11/03/2020</string>
+                <string>01/05/2021</string>
                 <key>BIOSVendor</key>
                 <string>Apple Inc.</string>
                 <key>BIOSVersion</key>
-                <string>429.60.3.0.0</string>
+                <string>429.80.1.0.0</string>
                 <key>BoardAssetTag</key>
                 <string></string>
                 <key>BoardLocationInChassis</key>
@@ -1147,6 +1155,8 @@
             <true/>
             <key>UpdateSMBIOS</key>
             <true/>
+            <key>UseRawUuidEncoding</key>
+            <false/>
             <key>UpdateSMBIOSMode</key>
             <string>Create</string>
         </dict>
@@ -1179,10 +1189,12 @@
                 <false/>
                 <key>MinimumVolume</key>
                 <integer>60</integer>
-                <key>SetupDelay</key>
-                <integer>0</integer>
+                <key>ResetTrafficClass</key>
+                <false/>
                 <key>PlayChime</key>
                 <string>Auto</string>
+                <key>SetupDelay</key>
+                <integer>0</integer>
                 <key>VolumeAmplifier</key>
                 <integer>0</integer>
             </dict>
@@ -1201,8 +1213,6 @@
                 <false/>
                 <key>KeyForgetThreshold</key>
                 <integer>5</integer>
-                <key>KeyMergeThreshold</key>
-                <integer>2</integer>
                 <key>KeySupport</key>
                 <true/>
                 <key>KeySupportMode</key>
@@ -1223,6 +1233,8 @@
                 <key>ConsoleMode</key>
                 <string></string>
                 <key>DirectGopRendering</key>
+                <false/>
+                <key>GopPassThrough</key>
                 <false/>
                 <key>ForceResolution</key>
                 <false/>
@@ -1284,6 +1296,10 @@
             </dict>
             <key>Quirks</key>
             <dict>
+                <key>ActivateHpetSupport</key>
+                <false/>
+                <key>DisableSecurityPolicy</key>
+                <false/>
                 <key>ExitBootServicesDelay</key>
                 <integer>0</integer>
                 <key>IgnoreInvalidFlexRatio</key>
