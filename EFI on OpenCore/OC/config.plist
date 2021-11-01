@@ -317,6 +317,8 @@
                 <false/>
                 <key>ProvideMaxSlide</key>
                 <integer>0</integer>
+                <key>ResizeAppleGpuBars</key>
+                <integer>-1</integer>
                 <key>RebuildAppleMemoryMap</key>
                 <false/>
                 <key>SetupVirtualMap</key>
@@ -1118,9 +1120,9 @@
                 <key>BID</key>
                 <string>Mac-BE088AF8C5EB4FA2</string>
                 <key>FirmwareFeatures</key>
-                <data>dvUP/QAAAAA=</data>
+                <data>dvUP/QgAAAA=</data>
                 <key>FirmwareFeaturesMask</key>
-                <data>P/8f/wAAAAA=</data>
+                <data>P/8f/wgAAAA=</data>
                 <key>MLB</key>
                 <string>C02731102QXJ0PG1H</string>
                 <key>ROM</key>
@@ -1133,11 +1135,11 @@
             <key>SMBIOS</key>
             <dict>
                 <key>BIOSReleaseDate</key>
-                <string>02/26/2021</string>
+                <string>09/25/2021</string>
                 <key>BIOSVendor</key>
                 <string>Apple Inc.</string>
                 <key>BIOSVersion</key>
-                <string>429.100.7.0.0</string>
+                <string>447.40.12.0.0</string>
                 <key>BoardAssetTag</key>
                 <string></string>
                 <key>BoardLocationInChassis</key>
@@ -1163,9 +1165,9 @@
                 <key>ChassisVersion</key>
                 <string>Mac-BE088AF8C5EB4FA2</string>
                 <key>FirmwareFeatures</key>
-                <data>dvUP/QAAAAA=</data>
+                <data>dvUP/QgAAAA=</data>
                 <key>FirmwareFeaturesMask</key>
-                <data>P/8f/wAAAAA=</data>
+                <data>P/8f/wgAAAA=</data>
                 <key>PlatformFeature</key>
                 <integer>0</integer>
                 <key>ProcessorType</key>
@@ -1257,10 +1259,46 @@
             <true/>
             <key>Drivers</key>
             <array>
-                <string>HFSPlus.efi</string>
-                <string>OpenRuntime.efi</string>
-                <string>AudioDxe.efi</string>
-                <string>OpenCanopy.efi</string>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Path</key>
+                    <string>HfsPlus.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Arguments</key>
+                    <string></string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Path</key>
+                    <string>OpenRuntime.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Arguments</key>
+                    <string></string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Path</key>
+                    <string>OpenCanopy.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Arguments</key>
+                    <string></string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Path</key>
+                    <string>AudioDxe.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Arguments</key>
+                    <string></string>
+                </dict>
             </array>
             <key>Input</key>
             <dict>
@@ -1359,6 +1397,8 @@
                 <true/>
                 <key>ExitBootServicesDelay</key>
                 <integer>0</integer>
+                <key>ForceOcWriteFlash</key>
+                <false/>
                 <key>ForgeUefiSupport</key>
                 <false/>
                 <key>IgnoreInvalidFlexRatio</key>
@@ -1367,6 +1407,8 @@
                 <false/>
                 <key>ReloadOptionRoms</key>
                 <false/>
+                <key>ResizeGpuBars</key>
+                <integer>-1</integer>
                 <key>RequestBootVarRouting</key>
                 <true/>
                 <key>TscSyncTimeout</key>
