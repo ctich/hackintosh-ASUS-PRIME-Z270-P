@@ -896,6 +896,8 @@
 			<integer>0</integer>
 			<key>HibernateMode</key>
 			<string>None</string>
+			<key>HibernateSkipsPicker</key>
+			<false/>
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>LauncherOption</key>
@@ -1039,6 +1041,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>UEFI Shell</string>
 				<key>Path</key>
@@ -1059,6 +1063,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>Clean Nvram</string>
 				<key>Path</key>
@@ -1079,6 +1085,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>HdaCodecDump</string>
 				<key>Path</key>
@@ -1106,7 +1114,7 @@
 				<key>Comment</key>
 				<string>APPLE_BOOT_VARIABLE_GUID</string>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 darkwake=0 shikigva=16</string>
+				<string>-v keepsyms=1 debug=0x100 darkwake=0</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwIAAA==
@@ -1125,8 +1133,6 @@
 				<string>csr-active-config</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
 		<key>LegacySchema</key>
@@ -1345,11 +1351,11 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>04/11/2022</string>
+			<string>08/22/2022</string>
 			<key>BIOSVendor</key>
 			<string>Apple Inc.</string>
 			<key>BIOSVersion</key>
-			<string>451.140.1.0.0</string>
+			<string>499.40.2.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
@@ -1445,6 +1451,12 @@
 			<integer>0</integer>
 			<key>KeySubsequentDelay</key>
 			<integer>5</integer>
+			<key>PointerDwellClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellDoubleClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellRadius</key>
+			<integer>0</integer>
 			<key>PointerPollMask</key>
 			<integer>-1</integer>
 			<key>PointerPollMax</key>
@@ -1492,6 +1504,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>HfsPlus.efi</string>
 			</dict>
@@ -1502,6 +1516,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenRuntime.efi</string>
 			</dict>
@@ -1512,6 +1528,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenCanopy.efi</string>
 			</dict>
@@ -1521,6 +1539,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>AudioDxe.efi</string>
